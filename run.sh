@@ -10,9 +10,9 @@ IFS=$(echo -en "\n\b")
 SCRIPT_NAME=$(basename $0)
 CP=0
 
-if [[ $SCRIPT_NAME == *cp ]]; then
+if [[ $SCRIPT_NAME == *$MC_POSTFIX ]]; then
     CP=1
-    SCRIPT_NAME=${SCRIPT_NAME%cp}
+    SCRIPT_NAME=${SCRIPT_NAME%$MC_POSTFIX}
 fi
 
 CONFIG="$HOME/.remote-manager/$SCRIPT_NAME.cfg"
