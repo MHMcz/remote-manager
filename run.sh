@@ -4,6 +4,7 @@
 # terms of the Do What The Fuck You Want To Public License, Version 2,
 # as published by Sam Hocevar. See the COPYING file for more details.
 
+. "$HOME/.remote-manager/config"
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
 SCRIPT_NAME=$(basename $0)
@@ -40,7 +41,7 @@ if [ "$COMMAND" != "" ]; then
       if [ $CP -eq 0 ]; then
         eval "ssh $server $params"
       else
-        eval "mc ~/work sh://$server"
+        eval "mc $DEFAULT_LOCAL_DIR sh://$server"
       fi
       echo -e "Closed... \033[1;31m$server\033[0m"
       trueend="1"

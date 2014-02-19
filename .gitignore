@@ -1,2 +1,3 @@
 *.cfg
+config
 !example.cfg
