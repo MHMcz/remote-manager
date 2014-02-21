@@ -18,6 +18,9 @@ ssh<b>$</b> exit
 Closed... <b>example@example.cz</b>
 </pre>
 
+## License
+Project is under Do What the Fuck You Want to Public License v2 (WTFPL-2.0).
+
 ## Requirements
 - Midnight Commander
 
