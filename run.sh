@@ -21,9 +21,16 @@ COMMAND=$1
 if [ "$COMMAND" == "" ]; then
   echo "==========================================="
   for i in `cat "$CONFIG"`; do
-    key=`echo $i | cut -d \; -f 1`
-    server=`echo $i | cut -d \; -f 2 | cut -d \@ -f 2`
-    echo -e " - \033[1;31m$key\033[0m: $server"
+    group_regex='^=== *\(.*\)$'
+    # return nothing if not match; return only group and no prefix
+    group=`echo $i | sed "/$group_regex/!d; s/$group_regex/\1/g"`
+    if [ "$group" != "" ]; then
+      echo -e "\033[1;32m$group\033[0m"
+    else
+      key=`echo $i | cut -d \; -f 1`
+      server=`echo $i | cut -d \; -f 2 | cut -d \@ -f 2`
+      echo -e " - \033[1;31m$key\033[0m: $server"
+    fi
   done
   echo "==========================================="
   echo

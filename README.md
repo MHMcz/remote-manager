@@ -5,8 +5,10 @@ Manage your SSH connections to groups and connect easily + choose to run SSH or 
 <pre>
 <b>$</b> devel
 ===========================================
+<b>PHP:</b>
  - <b>example</b>: example.cz
  - <b>home</b>: example.cz
+<b>JAVA:</b>
  - <b>server</b>: example.cz
 ===========================================
 
@@ -62,6 +64,8 @@ $ devel # or develcp
 - `~/.remote-manager/*.cfg`
   - files for links - every link to script has own config file with same name
   - file format is `alias;user@server;ssh_params`, one in line
+  - if you want sub-groups in one config files, syntax is:
+    - `=== GROUP_NAME` (like in example.cfg)
 
 ## Usage
 Sample usage when:
