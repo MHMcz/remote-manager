@@ -1,24 +1,8 @@
 # Shell Remote Manager
 
-Manage your SSH connections to groups and connect easily + choose to run SSH or Midnight Commander.
+Manage your SSH connections to multiple lists with sub-groups and connect easily + choose to run SSH or Midnight Commander.
 
-<pre>
-<b>$</b> devel
-===========================================
-<b>PHP:</b>
- - [<b>1</b>] <b>example</b>: example.cz
- - [<b>2</b>] <b>home</b>: example.cz
-<b>JAVA:</b>
- - [<b>3</b>] <b>server</b>: example.cz
-===========================================
-
-example
-Connecting... <b>example@example.cz</b>
-...
-ssh<b>$</b> exit
-...
-Closed... <b>example@example.cz</b>
-</pre>
+![Demo Remote Manager](http://i.imgur.com/tJXFhud.gif)
 
 ## License
 Project is under Do What the Fuck You Want to Public License v2 (WTFPL-2.0).
