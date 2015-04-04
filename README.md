@@ -43,7 +43,7 @@ $ cp config.dist config
 $ ln -s ~/.remote-manager/run.sh ~/bin/devel # or /usr/local/bin/devel or ...
 
 # create config file with same name
-$ cp example.cfg devel.cfg
+$ cp example.cfg.dist devel.cfg
 $ chmod 600 devel.cfg # not required, but better
 
 # edit devel.cfg file and create your own list of remotes
@@ -69,7 +69,7 @@ $ devel # or develcp
   - files for links - every link to script has own config file with same name
   - file format is `alias;user@server;ssh_params`, one in line
   - if you want sub-groups in one config files, syntax is:
-    - `=== GROUP_NAME` (like in example.cfg)
+    - `=== GROUP_NAME` (like in example.cfg.dist)
 
 ## Usage
 Sample usage when:
