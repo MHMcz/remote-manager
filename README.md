@@ -54,8 +54,19 @@ $ chmod 600 devel.cfg # not required, but better
 # link run.sh to you "bin" directory with same name + MD_POSTFIX from config file
 $ ln -s ~/.remote-manager/run.sh ~/bin/develcp # or /usr/local/bin/develcp or ...
 
-# optional for Oh-My-Zsh users - instal plugin for auto-completion
+# optional for Oh-My-Zsh users
+# instal plugin for auto-completion
 $ ln -s ~/.remote-manager/oh-my-zsh-plugin ~/.oh-my-zsh/custom/plugins/remote-manager
+
+# optional for Oh-My-Zsh users
+# edit ~/.zshrc and turn on new plugin
+# add "remote-manager" to "plugins" variable
+# like "plugins=(... remote-manager)"
+$ nano ~/.zshrc
+
+# optional for Oh-My-Zsh users
+# reload ~/.zshrc configuration
+$ source ~/.zshrc
 
 # now you can run application
 $ devel # or develcp

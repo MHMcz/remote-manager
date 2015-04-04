@@ -1,5 +1,8 @@
 # Changelog
 
+- 2015-04-04 v1.2.1
+ - revert "simple instalation" - not working well
+ - fix installation block in readme
 - 2015-04-04 v1.2
  - more simple instalation for Oh-My-Zsh users - auto generate alias for every config
  - auto-completion plugin for Oh-My-Zsh
