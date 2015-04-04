@@ -25,6 +25,7 @@ Project is under Do What the Fuck You Want to Public License v2 (WTFPL-2.0).
 
 ## Requirements
 - Midnight Commander
+- [Oh-My-Zsh](http://ohmyz.sh/) (if you want use plugin for tab auto-completion)
 
 ## Install
 
@@ -49,6 +50,9 @@ $ chmod 600 devel.cfg # not required, but better
 
 # link run.sh to you "bin" directory with same name + MD_POSTFIX from config file
 $ ln -s ~/.remote-manager/run.sh ~/bin/develcp # or /usr/local/bin/develcp or ...
+
+# optional for Oh-My-Zsh users - instal plugin for auto-completion
+$ ln -s ~/.remote-manager/oh-my-zsh-plugin ~/.oh-my-zsh/custom/plugins/remote-manager
 
 # now you can run application
 $ devel # or develcp
