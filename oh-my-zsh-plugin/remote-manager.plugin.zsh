@@ -1,5 +1,4 @@
 . "$HOME/.remote-manager/config"
-RUN_FILE="$HOME/.remote-manager/run.sh"
 
 get_group() {
   group_regex='^=== *\(.*\)$'
@@ -40,6 +39,4 @@ for config in $(ls "$HOME/.remote-manager/"*.cfg); do
 
   compdef "_remote_manager_args $filename" $filename
   compdef $filename$MC_POSTFIX=$filename
-  alias $filename="REMOTE_MANAGER_ALIAS=\"$filename\" $RUN_FILE"
-  alias $filename$MC_POSTFIX="REMOTE_MANAGER_ALIAS=\"$filename$MC_POSTFIX\" $RUN_FILE"
 done
