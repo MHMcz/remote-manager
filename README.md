@@ -6,10 +6,10 @@ Manage your SSH connections to groups and connect easily + choose to run SSH or 
 <b>$</b> devel
 ===========================================
 <b>PHP:</b>
- - <b>example</b>: example.cz
- - <b>home</b>: example.cz
+ - [<b>1</b>] <b>example</b>: example.cz
+ - [<b>2</b>] <b>home</b>: example.cz
 <b>JAVA:</b>
- - <b>server</b>: example.cz
+ - [<b>3</b>] <b>server</b>: example.cz
 ===========================================
 
 example
@@ -75,9 +75,11 @@ Sample usage when:
 ```
 $ devel
 ===========================================
- - example: example.cz
- - home: example.cz
- - server: example.cz
+PHP:
+ - [1] example: example.cz
+ - [2] home: example.cz
+JAVA:
+ - [3] server: example.cz
 ===========================================
 
 example
