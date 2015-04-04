@@ -52,9 +52,7 @@ if [ "$COMMAND" == "" ]; then
   quick_key=1
   echo "==========================================="
   for i in `cat "$CONFIG"`; do
-    group_regex='^=== *\(.*\)$'
-    # return nothing if not match; return only group and no prefix
-    group=`echo $i | sed "/$group_regex/!d; s/$group_regex/\1/g"`
+    group=`get_group "$i"`
     if [ "$group" != "" ]; then
       echo -e "\033[1;32m$group\033[0m"
     else
