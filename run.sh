@@ -24,6 +24,10 @@ get_server() {
   echo $i | cut -d \; -f 2 | cut -d \@ -f 2
 }
 
+get_server_with_login() {
+  echo $i | cut -d \; -f 2
+}
+
 get_params() {
   echo $i | cut -d \; -f 3
 }
@@ -83,7 +87,7 @@ if [ "$COMMAND" != "" ]; then
 
   for i in `cat "$CONFIG"`; do
     key=`get_key "$i"`
-    server=`get_server "$i"`
+    server=`get_server_with_login "$i"`
     params=`get_params "$i"`
     
     if [ "$COMMAND" == "$key" ]; then
