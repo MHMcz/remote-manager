@@ -1,5 +1,8 @@
 # Changelog
 
+- 2015-04-04 v1.2.2
+ - fix - parsing host with login from config file
+ - added demo animated gif to readme :)
 - 2015-04-04 v1.2.1
  - revert "simple instalation" - not working well
  - fix installation block in readme
