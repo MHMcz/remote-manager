@@ -7,7 +7,11 @@
 . "$HOME/.remote-manager/config"
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
-SCRIPT_NAME=$(basename $0)
+if [ "$REMOTE_MANAGER_ALIAS" != "" ]; then
+  SCRIPT_NAME=$(basename "$REMOTE_MANAGER_ALIAS")
+else
+  SCRIPT_NAME=$(basename "$0")
+fi
 CP=0
 
 get_group() {

@@ -23,11 +23,47 @@ Closed... <b>example@example.cz</b>
 ## License
 Project is under Do What the Fuck You Want to Public License v2 (WTFPL-2.0).
 
+## Changes
+See [CHANGELOG](CHANGELOG.md) file
+
 ## Requirements
 - Midnight Commander
 - [Oh-My-Zsh](http://ohmyz.sh/) (if you want use plugin for tab auto-completion)
 
 ## Install
+
+### Easier for [Oh-My-Zsh](http://ohmyz.sh/) users
+
+```Bash
+# Clone git repository to ~/.remote-manager/
+$ git clone https://github.com/MHMcz/remote-manager.git ~/.remote-manager
+
+# copy config file
+$ cd ~/.remote-manager/
+$ cp config.dist config
+
+# edit new config file
+
+# create config file with same name as command you want to run
+$ cp example.cfg.dist devel.cfg
+$ chmod 600 devel.cfg # not required, but better
+
+# edit devel.cfg file and create your own list of remotes
+
+# optional for Oh-My-Zsh users - instal plugin for Oh-My-Zsh auto-completion & auto alias
+$ ln -s ~/.remote-manager/oh-my-zsh-plugin ~/.oh-my-zsh/custom/plugins/remote-manager
+
+# reload ZSH configuration (to load new plugin)
+$ source ~/.zshrc
+
+# now you can run application
+$ devel # or develcp
+...
+
+# now when you create another *.cfg file and reload ZSH configuration, all will be ready
+````
+
+### For other users
 
 ```Bash
 # Clone git repository to ~/.remote-manager/
@@ -50,9 +86,6 @@ $ chmod 600 devel.cfg # not required, but better
 
 # link run.sh to you "bin" directory with same name + MD_POSTFIX from config file
 $ ln -s ~/.remote-manager/run.sh ~/bin/develcp # or /usr/local/bin/develcp or ...
-
-# optional for Oh-My-Zsh users - instal plugin for auto-completion
-$ ln -s ~/.remote-manager/oh-my-zsh-plugin ~/.oh-my-zsh/custom/plugins/remote-manager
 
 # now you can run application
 $ devel # or develcp
